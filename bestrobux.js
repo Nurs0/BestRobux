@@ -188,7 +188,7 @@ bot.on("callback_query", (callbackQuery) => {
                     [
                         {
                             text: "Новостной канал",
-                            url: "t.me/honeyrobux"
+                            url: "t.me/bestrobuxnews"
                         }
                     ],
                     [
@@ -236,7 +236,7 @@ bot.on("callback_query", (callbackQuery) => {
                     ],
                     [
                         {
-                            text: "🛍️ Инструкция по покупке 🛍️", url: "https://t.me/honeyrobux/2"
+                            text: "🛍️ Инструкция по покупке 🛍️", url: "https://t.me/bestrobuxnews/3"
                         }
                     ],
                     [
