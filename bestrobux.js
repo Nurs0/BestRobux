@@ -49,7 +49,7 @@ bot.on("callback_query", (callbackQuery) => {
     const data = callbackQuery.data;
     const messageId = callbackQuery.message.message_id;
     if (data === "buyRobux") {
-        const message = `💸 Какое количество робуксов вы желаете купить?\n✔️ [Курс робуксов: 1 руб - 1.8 робукс]`;
+        const message = `💸 Какое количество робуксов вы желаете купить?\n✔️ [Курс робуксов: 1 руб - 1.5 робукс]`;
         bot.editMessageText(message, {
             chat_id: chatId,
             message_id: messageId,
@@ -66,7 +66,7 @@ bot.on("callback_query", (callbackQuery) => {
         });
         chatState[chatId] = "waitMoneyAmount"
     } else if (data === "calculator") {
-        bot.editMessageText("🧮 Я калькулятор, для подсчета робуксов \n[Курс робуксов -> 1 руб - 1.8 робукса]\n", {
+        bot.editMessageText("🧮 Я калькулятор, для подсчета робуксов \n[Курс робуксов -> 1 руб - 1.5 робукса]\n", {
             chat_id: chatId,
             message_id: messageId,
             reply_markup: {
@@ -469,7 +469,7 @@ bot.on("callback_query", (callbackQuery) => {
         const chatId = -850674458
         const adminUserId = -850674458
         const targetUserId = specialUserId
-        const amount = Math.round(Dividednumber * 1.8)
+        const amount = Math.round(Dividednumber * 1.5)
         if (isAdminUser(adminUserId)) {
             // Вызов функции для пополнения баланса пользователя
             increaseUserBalance(targetUserId, amount, (result) => {
@@ -594,8 +594,7 @@ bot.on('message', async (msg) => {
         if (msg.text === msg.text) {
             if (msg.text > 0) {
                 const number = msg.text
-                Dividednumber = Math.round(number / 1.8)
-                costnumber = number * 0.59
+                Dividednumber = Math.round(number / 1.5)
                 chatState[chatId] = "waitMoneyAmount"
                 const keyboardPayments = {
                     reply_markup: {
@@ -720,7 +719,7 @@ bot.on('message', async (msg) => {
 
         // Преобразуем текст в число и вычисляем увеличенное значение
         const number = parseFloat(text);
-        const increasedNumber = Math.round(number * 0.555555555);
+        const increasedNumber = Math.round(number * 0.66666667);
 
         bot.sendMessage(chatId, `Ты должен заплатить ${increasedNumber} рублей`);
     }
